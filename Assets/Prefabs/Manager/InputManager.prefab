@@ -45,3 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputBooleanDataList:
   - {fileID: 11400000, guid: 22711a94ee1a28e449fee45d7aa4d290, type: 2}
+  - {fileID: 11400000, guid: 72361f72507c71f44aa046fdf0e2272b, type: 2}
+  - {fileID: 11400000, guid: 984bd178f77d5054ba3fd4854a85f9ac, type: 2}
