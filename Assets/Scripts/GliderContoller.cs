@@ -9,8 +9,9 @@ public class GliderContoller : MonoBehaviour
     private Rigidbody2D _rb;
 
     public float speed;
-    public float upwardsBoost;
-    public float downwardsBoost;
+    public float upwardsVelocityBoost;
+    public float downwardsVelocityBoost;
+    public float horizontalVelocityBoost;
     
     private Vector2 _velocityVector;
     private Vector2 _dampVelocity;
@@ -21,7 +22,7 @@ public class GliderContoller : MonoBehaviour
     {
         _rb.velocity = _velocityVector;
         _dampVelocity = Vector2.zero;
-        _velocityVector = Vector2.right * Time.deltaTime * speed;
+        _velocityVector = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost);
     }
 
     // Update is called once per frame
@@ -29,11 +30,11 @@ public class GliderContoller : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            _rb.velocity = Vector2.right * (Time.deltaTime * speed) + Vector2.up * (upwardsBoost * Time.deltaTime * speed);
+            _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) + Vector2.up * (Time.deltaTime * speed * upwardsVelocityBoost);
         }
-        else if(Input.GetKeyUp(KeyCode.Space))
+        else
         {
-            _targetVector = Vector2.right * (Time.deltaTime * speed) + Vector2.up * (downwardsBoost * Time.deltaTime * speed);
+            _targetVector = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) + Vector2.up * (Time.deltaTime * speed * downwardsVelocityBoost);
             
             _rb.velocity = Vector2.SmoothDamp(_velocityVector, _targetVector, ref _dampVelocity, 1);
             
