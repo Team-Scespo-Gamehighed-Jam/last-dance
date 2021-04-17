@@ -12,7 +12,8 @@ namespace Triggers
                 return;
             
             Debug.Log("Space End!");
-            //TODO: Space End Animation!
+            //Space End Animation!
+            LevelLoader.intance.LoadNextLevel();
         }
     }
 }
