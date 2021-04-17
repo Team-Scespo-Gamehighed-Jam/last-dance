@@ -10,7 +10,7 @@ namespace Player.Mountain
     {
 
         private readonly List<string> _keys = new List<string>();
-        [SerializeField] private Key prefabText;
+        [SerializeField] private MountainKey prefabText;
         [SerializeField] private List<Transform> placeList;
         private TMP_Text _currentKey;
         
@@ -36,7 +36,7 @@ namespace Player.Mountain
         {
             if (!Input.anyKeyDown || Input.GetMouseButtonDown(0)) return;
             
-            if (_currentKey.text==Input.inputString)
+            if (_currentKey.text.ToLower()==Input.inputString)
             {
                 //Character Up from mountain
                 CharacterMove(true);
@@ -48,8 +48,6 @@ namespace Player.Mountain
             {
                 //Character Down from mountain
                 CharacterMove(false);
-                
-                //Debug.Log("Meeh, you are so bad!");
             }
 
         }
@@ -62,7 +60,7 @@ namespace Player.Mountain
             var text = Instantiate(prefabText, transform);
             
             text.transform.position = placeList[placeIndex].transform.position;
-            text.keyTMP.text = _keys[keyIndex];
+            text.keyTMP.text = _keys[keyIndex].ToUpper();
 
             text.mountainKeyWork = this;
 
