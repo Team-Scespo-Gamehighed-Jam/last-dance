@@ -24,12 +24,30 @@ namespace Player.Mountain
             if (_time > 0)
             {
                 _time -= Time.deltaTime;
-                //fillImg.fillAmount = _time / timeMaxPoint;
+                image.fillAmount = _time / timeMaxPoint;
+                ColorPicker();
 
             }
             else
             {
-                
+                //TODO: Character Down from mountain
+            }
+        }
+
+
+        private void ColorPicker()
+        {
+            float value = _time / timeMaxPoint;
+            if (value<=0.33f)
+            {
+                image.color=Color.red;
+            }else if (value<=0.66f && value>0.33f)
+            {
+                image.color=Color.yellow;
+            }
+            else
+            {
+                image.color=Color.green;
             }
         }
     }

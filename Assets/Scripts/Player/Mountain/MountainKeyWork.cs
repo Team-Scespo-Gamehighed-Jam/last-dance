@@ -34,13 +34,13 @@ namespace Player.Mountain
             
             if (_currentKey.text==Input.inputString)
             {
-                //Character UP
-                Destroy(_currentKey.gameObject);
+                //TODO: Character Up from mountain
+                Destroy(_currentKey.transform.parent.gameObject);
                 SpawnKey();
             }
             else
             {
-                //Character down
+                //TODO: Character Down from mountain
                 Debug.Log("Meeh, you are so bad!");
             }
 
@@ -53,7 +53,7 @@ namespace Player.Mountain
             
             var text = Instantiate(prefabText, transform);
             
-            text.keyTMP.rectTransform.position = placeList[placeIndex].transform.position;
+            text.transform.position = placeList[placeIndex].transform.position;
             text.keyTMP.text = _keys[keyIndex];
 
             text.mountainKeyWork = this;
