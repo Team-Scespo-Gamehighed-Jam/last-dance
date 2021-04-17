@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Player.Mountain
 {
-    public class Key : MonoBehaviour
+    public class MountainKey : MonoBehaviour
     {
         [HideInInspector]public MountainKeyWork mountainKeyWork;
         public TMP_Text keyTMP;
