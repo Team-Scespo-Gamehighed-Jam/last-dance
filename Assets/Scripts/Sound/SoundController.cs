@@ -5,7 +5,7 @@ namespace Sound
 {
     public class SoundController : MonoBehaviour
     {
-        private static SoundController SoundPlayer;
+        public static SoundController SoundPlayer;
 
         public AudioSource MainAudioSource;
         
