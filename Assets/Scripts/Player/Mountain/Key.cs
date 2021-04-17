@@ -14,6 +14,8 @@ namespace Player.Mountain
         [SerializeField] private Image image;
         private float _time;
 
+        private bool _isTimeUp=false;
+
         private void Start()
         {
             _time = timeMaxPoint;
@@ -26,12 +28,17 @@ namespace Player.Mountain
                 _time -= Time.deltaTime;
                 image.fillAmount = _time / timeMaxPoint;
                 ColorPicker();
+                return;
+            }
 
-            }
-            else
-            {
-                //TODO: Character Down from mountain
-            }
+            if (_isTimeUp)
+                return;
+
+            //TODO: Character Down from mountain
+            _isTimeUp = true;
+            mountainKeyWork.CharacterMove(false);
+            mountainKeyWork.SpawnKey();
+            Destroy(gameObject);
         }
 
 

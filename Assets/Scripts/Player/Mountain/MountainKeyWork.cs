@@ -13,6 +13,10 @@ namespace Player.Mountain
         [SerializeField] private Key prefabText;
         [SerializeField] private List<Transform> placeList;
         private TMP_Text _currentKey;
+        
+        public delegate void CharacterUpDown(bool isUp);
+        public static event CharacterUpDown CharacterEventHandler;
+        
 
         private void Start()
         {
@@ -35,13 +39,17 @@ namespace Player.Mountain
             if (_currentKey.text==Input.inputString)
             {
                 //TODO: Character Up from mountain
+                CharacterMove(true);
+
                 Destroy(_currentKey.transform.parent.gameObject);
                 SpawnKey();
             }
             else
             {
                 //TODO: Character Down from mountain
-                Debug.Log("Meeh, you are so bad!");
+                CharacterMove(false);
+                
+                //Debug.Log("Meeh, you are so bad!");
             }
 
         }
@@ -59,6 +67,11 @@ namespace Player.Mountain
             text.mountainKeyWork = this;
 
             _currentKey = text.keyTMP;
+        }
+
+        public void CharacterMove(bool isUp)
+        {
+            CharacterEventHandler?.Invoke(isUp);
         }
     }
 }
