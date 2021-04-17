@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class GliderContoller : MonoBehaviour
 {
-    [SerializeField]
-    private Rigidbody2D _rb;
+    [SerializeField] private Rigidbody2D _rb;
+
+    [SerializeField] private Animator _animator;
 
     public float speed;
     public float upwardsVelocityBoost;
@@ -52,7 +53,15 @@ public class GliderContoller : MonoBehaviour
     {
         if (other.tag.Equals("Enemy"))
         {
-            Destroy(other.gameObject);
+            _animator.SetBool("hit", true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag.Equals("Enemy"))
+        {
+            _animator.SetBool("hit", false);
         }
     }
 }
