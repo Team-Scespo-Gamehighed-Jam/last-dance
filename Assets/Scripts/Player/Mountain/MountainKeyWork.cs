@@ -38,7 +38,7 @@ namespace Player.Mountain
             
             if (_currentKey.text==Input.inputString)
             {
-                //TODO: Character Up from mountain
+                //Character Up from mountain
                 CharacterMove(true);
 
                 Destroy(_currentKey.transform.parent.gameObject);
@@ -46,7 +46,7 @@ namespace Player.Mountain
             }
             else
             {
-                //TODO: Character Down from mountain
+                //Character Down from mountain
                 CharacterMove(false);
                 
                 //Debug.Log("Meeh, you are so bad!");

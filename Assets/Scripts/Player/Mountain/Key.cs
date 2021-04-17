@@ -34,7 +34,7 @@ namespace Player.Mountain
             if (_isTimeUp)
                 return;
 
-            //TODO: Character Down from mountain
+            // Character Down from mountain
             _isTimeUp = true;
             mountainKeyWork.CharacterMove(false);
             mountainKeyWork.SpawnKey();
