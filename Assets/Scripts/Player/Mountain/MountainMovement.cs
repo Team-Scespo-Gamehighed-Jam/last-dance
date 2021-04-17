@@ -32,7 +32,8 @@ namespace Player.Mountain
             Debug.Log("Up!");
             if (transform.position.y>=maxPosY)
             {
-                //TODO: Mountain End!
+                LevelLoader.intance.LoadNextLevel();
+                //Mountain End!
                 Debug.Log("Mountain End!");
                 return;
             }
