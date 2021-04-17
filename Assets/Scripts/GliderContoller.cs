@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,20 +26,33 @@ public class GliderContoller : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Space))
         {
             _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) + Vector2.up * (Time.deltaTime * speed * upwardsVelocityBoost);
+            if(transform.rotation.z <= 0)
+                transform.Rotate(0, 0, 45);
         }
         else
         {
             _targetVector = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) + Vector2.up * (Time.deltaTime * speed * downwardsVelocityBoost);
             
             _rb.velocity = Vector2.SmoothDamp(_velocityVector, _targetVector, ref _dampVelocity, 1);
+            if(transform.rotation.z >= 0)
+                transform.Rotate(0, 0, -45);
             
             _velocityVector = _targetVector;
             _dampVelocity = Vector2.zero;
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag.Equals("Enemy"))
+        {
+            Destroy(other.gameObject);
         }
     }
 }
