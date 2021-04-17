@@ -4,6 +4,7 @@ using Player.Mountain;
 using Player.Rocket;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Triggers
 {
@@ -36,7 +37,7 @@ namespace Triggers
                 return;
             
             Debug.Log("Rocket End Option");
-            //TODO: Parachute animation End!
+            
             
             SpawnKey();
             StartCoroutine(DetectKey());
@@ -67,11 +68,16 @@ namespace Triggers
                         Destroy(_currentKey.transform.parent.gameObject);
                         isEnd = false;
                         Debug.Log("Parachute");
-                        //Parachute
+                        //Parachute animation End!
+                        int index = SceneManager.GetActiveScene().buildIndex + 2;
+                        LevelLoader.intance.LoadNextLevel(index);
+                        
                     }
                     else
                     {
                         Debug.Log("Space");
+                        //Parachute animation End!
+                        LevelLoader.intance.LoadNextLevel();
                         isEnd = false;
                         //Space
                     }

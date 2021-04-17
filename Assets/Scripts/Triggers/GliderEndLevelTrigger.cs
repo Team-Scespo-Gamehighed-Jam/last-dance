@@ -12,7 +12,8 @@ namespace Triggers
                 return;
             
             Debug.Log("Use Rocket Animation");
-            //TODO: Glider End Animation!
+            LevelLoader.intance.LoadNextLevel();
+            //Glider End Animation!
         }
     }
 }
