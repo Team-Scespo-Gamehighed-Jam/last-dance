@@ -54,6 +54,7 @@ public class GliderContoller : MonoBehaviour
         if (other.tag.Equals("Enemy"))
         {
             _animator.SetBool("hit", true);
+            //TODO: Gameover Glider!
         }
     }
 
@@ -62,6 +63,7 @@ public class GliderContoller : MonoBehaviour
         if (other.tag.Equals("Enemy"))
         {
             _animator.SetBool("hit", false);
+            //TODO: Gameover Glider!
         }
     }
 }

@@ -861,7 +861,8 @@ PrefabInstance:
         type: 3}
       propertyPath: prefabText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5456287124550709504, guid: dc429af92c630544fb4934ef8721da47,
+        type: 3}
     - target: {fileID: 1830811185616642746, guid: a501bfa2cd7b21547983ca492e8cbaf3,
         type: 3}
       propertyPath: placeList.Array.size
