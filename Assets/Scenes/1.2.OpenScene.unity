@@ -196,23 +196,30 @@ PrefabInstance:
     - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
         type: 3}
       propertyPath: _dialog.lines.Array.size
-      value: 10
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[0]
+      value: 'This is it. This is the miserable end of my pitiful existence. What
+        to do? What to think? '
       objectReference: {fileID: 0}
     - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
         type: 3}
       propertyPath: _dialog.lines.Array.data[1]
-      value: Hello doc
+      value: "I know what to do. I\u2019ve been planning for this. I knew that this
+        day would come. Doesn\u2019t matter if a doctor or ... or someone else said. "
       objectReference: {fileID: 0}
     - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
         type: 3}
       propertyPath: _dialog.lines.Array.data[2]
-      value: 'Doctor: I hope you are doing well. How is it going? You still have
-        the pain in your head?'
+      value: "I didn't stand a chance. It was obvious from the beginning. Dreams,
+        desires, wishes. I even \u2026 even had a bucket list like everyone else."
       objectReference: {fileID: 0}
     - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
         type: 3}
       propertyPath: _dialog.lines.Array.data[3]
-      value: "I don\u2019t know doc. You tell me! Am I doing well? "
+      value: Maybe my last week is not the best occasion but the Last Dance.
       objectReference: {fileID: 0}
     - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
         type: 3}
@@ -719,10 +726,7 @@ PrefabInstance:
     - target: {fileID: 2564018383936926209, guid: c7c209db92750624982577c5a9db398f,
         type: 3}
       propertyPath: m_text
-      value: "What is it like to know when you are going to die? Is that luck or
-        a curse? Well, in my case it\u2019s worse than a curse. I don\u2019t know
-        when. But soon enough to know that I am dying. I\u2019m sick. Terribly. Today
-        I\u2019ll take another trip to the hospital. I hope this is the last\u2026\r\n"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2564018383936926210, guid: c7c209db92750624982577c5a9db398f,
         type: 3}
