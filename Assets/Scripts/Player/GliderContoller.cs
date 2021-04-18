@@ -112,6 +112,7 @@ public class GliderContoller : MonoBehaviour
         this.controllable = controllable;
         _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost * velocityBoost);
         gameFinished = true;
+        
         //TODO: implement game over!
     }
 }
