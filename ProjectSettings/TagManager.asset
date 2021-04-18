@@ -46,3 +46,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Base
+    uniqueID: 2434933243
+    locked: 0
+  - name: Object
+    uniqueID: 3339873045
+    locked: 0
+  - name: Sky
+    uniqueID: 2731193583
+    locked: 0
+  - name: Montain
+    uniqueID: 768958847
+    locked: 0
+  - name: Montain2
+    uniqueID: 1639494153
+    locked: 0
+  - name: Player
+    uniqueID: 3778164453
+    locked: 0
