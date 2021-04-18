@@ -11,7 +11,7 @@ namespace Triggers
             if (!GliderHelper.GliderList.ContainsKey(instanceID))
                 return;
             
-            Debug.Log("Use Rocket Animation");
+            //Debug.Log("Use Rocket Animation");
             LevelLoader.intance.LoadNextLevel();
             //Glider End Animation!
         }
