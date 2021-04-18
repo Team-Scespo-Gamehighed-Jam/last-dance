@@ -18,12 +18,15 @@ public class GliderContoller : MonoBehaviour
     private Vector2 _dampVelocity;
     private Vector2 _targetVector;
 
-    private bool directionUpwards;
+    private bool controllable;
+    private int endGameBoost;
+    private bool gameFinished;
 
     // Start is called before the first frame update
     void Start()
     {
-        directionUpwards = false;
+        controllable = true;
+        gameFinished = false;
         _rb.velocity = _velocityVector;
         _dampVelocity = Vector2.zero;
         _velocityVector = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost);
@@ -32,24 +35,27 @@ public class GliderContoller : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (controllable)
         {
-            _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) +
-                           Vector2.up * (Time.deltaTime * speed * upwardsVelocityBoost);
-            transform.rotation =
-                Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 45), speed * Time.deltaTime);
-        }
-        else
-        {
-            _targetVector = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) +
-                            Vector2.up * (Time.deltaTime * speed * downwardsVelocityBoost);
+            if (Input.GetKey(KeyCode.Space))
+            {
+                _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) +
+                               Vector2.up * (Time.deltaTime * speed * upwardsVelocityBoost);
+                transform.rotation =
+                    Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 45), speed * Time.deltaTime);
+            }
+            else
+            {
+                _targetVector = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) +
+                                Vector2.up * (Time.deltaTime * speed * downwardsVelocityBoost);
 
-            _rb.velocity = Vector2.SmoothDamp(_velocityVector, _targetVector, ref _dampVelocity, 1);
-            transform.rotation =
-                Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, -45), speed * Time.deltaTime);
+                _rb.velocity = Vector2.SmoothDamp(_velocityVector, _targetVector, ref _dampVelocity, 1);
+                transform.rotation =
+                    Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, -45), speed * Time.deltaTime);
 
-            _velocityVector = _targetVector;
-            _dampVelocity = Vector2.zero;
+                _velocityVector = _targetVector;
+                _dampVelocity = Vector2.zero;
+            }
         }
     }
 
@@ -60,7 +66,13 @@ public class GliderContoller : MonoBehaviour
         {
             _animator.SetBool("hit", true);
             Debug.Log("hit");
+            EndGame(false, 1);
             //TODO: Gameover Glider!
+        }
+
+        else if (other.tag.Equals("Ceiling Collider"))
+        {
+            controllable = false;
         }
     }
 
@@ -68,9 +80,38 @@ public class GliderContoller : MonoBehaviour
     {
         if (other.tag.Equals("Enemy"))
         {
-            _animator.SetBool("hit", false);
             Debug.Log("exit hit");
+            EndGame(false, 1);
             //TODO: Gameover Glider!
         }
+
+        else if (other.tag.Equals("Glider End Level Trigger"))
+        {
+            EndGame(false, 5);
+        }
+
+        else if (other.tag.Equals("Ceiling Collider") && !gameFinished)
+        {
+            controllable = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag.Equals("Ground Collider"))
+        {
+            _animator.SetBool("hit", true);
+            Debug.Log("ground hit");
+            EndGame(false, 1);
+            //TODO: Gameover Glider!
+        }
+    }
+
+    private void EndGame(bool controllable, float velocityBoost)
+    {
+        this.controllable = controllable;
+        _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost * velocityBoost);
+        gameFinished = true;
+        //TODO: implement game over!
     }
 }

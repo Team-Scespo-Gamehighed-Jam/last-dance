@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     public static LevelLoader intance;
+
+    [SerializeField] private TMP_Text _text;
     
     public Animator transition;
     [SerializeField] private int transitionTime;
@@ -31,6 +34,7 @@ public class LevelLoader : MonoBehaviour
 
     private IEnumerator LoadLevel(int levelIndex)
     {
+        _text.text = "";
         transition.enabled = true;
         transition.SetTrigger("Start");
 
