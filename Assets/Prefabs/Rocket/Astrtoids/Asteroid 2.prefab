@@ -143,3 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d69c8dd71d241a6aef7380806d4b0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dialog:
+    lines:
+    - Game Over!
