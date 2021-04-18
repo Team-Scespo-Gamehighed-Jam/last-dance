@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Dialog;
 using UnityEngine;
 
 public class GliderContoller : MonoBehaviour
@@ -8,6 +9,8 @@ public class GliderContoller : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb;
 
     [SerializeField] private Animator _animator;
+
+    [SerializeField] private Dialog.Dialog gameOverDialog;
 
     public float speed;
     public float upwardsVelocityBoost;
@@ -21,6 +24,7 @@ public class GliderContoller : MonoBehaviour
     private bool controllable;
     private int endGameBoost;
     private bool gameFinished;
+    private bool isGameOver=false;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +72,8 @@ public class GliderContoller : MonoBehaviour
             Debug.Log("hit");
             EndGame(false, 1);
             //TODO: Gameover Glider!
+
+            GameOver();
         }
 
         else if (other.tag.Equals("Ceiling Collider"))
@@ -83,6 +89,8 @@ public class GliderContoller : MonoBehaviour
             Debug.Log("exit hit");
             EndGame(false, 1);
             //TODO: Gameover Glider!
+
+            GameOver();
         }
 
         else if (other.tag.Equals("Ceiling Collider") && !gameFinished)
@@ -99,6 +107,8 @@ public class GliderContoller : MonoBehaviour
             Debug.Log("ground hit");
             EndGame(false, 1);
             //TODO: Gameover Glider!
+
+            GameOver();
         }
     }
 
@@ -109,6 +119,7 @@ public class GliderContoller : MonoBehaviour
         gameFinished = true;
         
         //TODO: implement game over!
+        GameOver();
     }
     
     public void Transition(bool controllable, float velocityBoost)
@@ -116,5 +127,18 @@ public class GliderContoller : MonoBehaviour
         this.controllable = controllable;
         _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost * velocityBoost);
         gameFinished = true;
+    }
+
+    private void GameOver()
+    {
+        if (isGameOver)
+            return;
+
+        isGameOver = true;
+        
+        Debug.Log("Game Over!");
+        DialogManager.instance.ShowDialog(gameOverDialog);
+        
+        LevelLoader.intance.LoadNextLevel(0);
     }
 }
