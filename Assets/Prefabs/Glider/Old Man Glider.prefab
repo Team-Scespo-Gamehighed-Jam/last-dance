@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 829163503326820565}
   - component: {fileID: 829163503326820564}
   - component: {fileID: 829163503326820569}
-  - component: {fileID: 829163503326820568}
   - component: {fileID: 829163503326820567}
+  - component: {fileID: 139655074}
   m_Layer: 0
   m_Name: Old Man Glider
-  m_TagString: Untagged
+  m_TagString: Glider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &829163503326820568
+--- !u!114 &829163503326820567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829163503326820563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105d2a15241162d459827689e811e63e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 829163503326820569}
+  _animator: {fileID: 829163503326820564}
+  speed: 100
+  upwardsVelocityBoost: 3
+  downwardsVelocityBoost: -2
+  horizontalVelocityBoost: 2
+--- !u!61 &139655074
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,23 +168,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.8333334, y: 1.7083334}
   m_EdgeRadius: 0
---- !u!114 &829163503326820567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829163503326820563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 105d2a15241162d459827689e811e63e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rb: {fileID: 829163503326820569}
-  _animator: {fileID: 829163503326820564}
-  speed: 100
-  upwardsVelocityBoost: 3
-  downwardsVelocityBoost: -2
-  horizontalVelocityBoost: 2
