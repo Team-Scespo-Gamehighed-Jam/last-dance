@@ -216,6 +216,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogManager
       objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979619, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45410f6a013780b478f27273f87b536d, type: 3}
 --- !u!1 &799330860
@@ -384,6 +389,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895283, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
         type: 3}
       propertyPath: m_Pivot.x
@@ -498,6 +508,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2564018383936926209, guid: c7c209db92750624982577c5a9db398f,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564018383936926209, guid: c7c209db92750624982577c5a9db398f,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 2564018384288810105, guid: c7c209db92750624982577c5a9db398f,
         type: 3}
       propertyPath: m_RootOrder
