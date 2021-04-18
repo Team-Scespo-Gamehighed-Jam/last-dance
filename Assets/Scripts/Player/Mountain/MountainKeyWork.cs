@@ -21,14 +21,12 @@ namespace Player.Mountain
 
         private void Start()
         {
-            _keys.Add("r");
-            _keys.Add("m");
-            _keys.Add("g");
-            _keys.Add("g");
-            _keys.Add("b");
+            _keys.Add("q");
+            _keys.Add("w");
+            _keys.Add("a");
+            _keys.Add("s");
+            _keys.Add("d");
             _keys.Add("e");
-            _keys.Add("m");
-            _keys.Add("h");
 
             StartCoroutine(CheckKey());
 
