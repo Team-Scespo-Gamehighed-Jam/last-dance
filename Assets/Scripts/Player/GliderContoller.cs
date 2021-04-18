@@ -13,14 +13,17 @@ public class GliderContoller : MonoBehaviour
     public float upwardsVelocityBoost;
     public float downwardsVelocityBoost;
     public float horizontalVelocityBoost;
-    
+
     private Vector2 _velocityVector;
     private Vector2 _dampVelocity;
     private Vector2 _targetVector;
 
+    private bool directionUpwards;
+
     // Start is called before the first frame update
     void Start()
     {
+        directionUpwards = false;
         _rb.velocity = _velocityVector;
         _dampVelocity = Vector2.zero;
         _velocityVector = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost);
@@ -31,18 +34,20 @@ public class GliderContoller : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) + Vector2.up * (Time.deltaTime * speed * upwardsVelocityBoost);
-            if(transform.rotation.z <= 0)
-                transform.Rotate(0, 0, 45);
+            _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) +
+                           Vector2.up * (Time.deltaTime * speed * upwardsVelocityBoost);
+            transform.rotation =
+                Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, 45), speed * Time.deltaTime);
         }
         else
         {
-            _targetVector = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) + Vector2.up * (Time.deltaTime * speed * downwardsVelocityBoost);
-            
+            _targetVector = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost) +
+                            Vector2.up * (Time.deltaTime * speed * downwardsVelocityBoost);
+
             _rb.velocity = Vector2.SmoothDamp(_velocityVector, _targetVector, ref _dampVelocity, 1);
-            if(transform.rotation.z >= 0)
-                transform.Rotate(0, 0, -45);
-            
+            transform.rotation =
+                Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, -45), speed * Time.deltaTime);
+
             _velocityVector = _targetVector;
             _dampVelocity = Vector2.zero;
         }
@@ -54,6 +59,7 @@ public class GliderContoller : MonoBehaviour
         if (other.tag.Equals("Enemy"))
         {
             _animator.SetBool("hit", true);
+            Debug.Log("hit");
             //TODO: Gameover Glider!
         }
     }
@@ -63,6 +69,7 @@ public class GliderContoller : MonoBehaviour
         if (other.tag.Equals("Enemy"))
         {
             _animator.SetBool("hit", false);
+            Debug.Log("exit hit");
             //TODO: Gameover Glider!
         }
     }

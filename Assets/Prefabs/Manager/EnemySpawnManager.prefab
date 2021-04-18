@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  enemyController: {fileID: 9025028501130451013, guid: 316a6ab7f6622da44ae16181398a4df1,
+  enemyControllerBiplane: {fileID: 7187268043272043619, guid: 8ffa661af03f9da45ba281f2bbacb873,
+    type: 3}
+  enemyControllerBoeing: {fileID: 2027530997185742103, guid: b7a528c76ab19bb41976ae76bf272329,
     type: 3}
   spawnOffsetX: 5
   columnCount: 10
-  columnGap: 5
+  columnGap: 22

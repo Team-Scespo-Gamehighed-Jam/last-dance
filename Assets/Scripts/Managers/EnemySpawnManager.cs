@@ -11,7 +11,8 @@ public class EnemySpawnManager : MonoBehaviour
 {
     [SerializeField] private Camera cam;
 
-    [SerializeField] private EnemyController enemyController;
+    [SerializeField] private EnemyController enemyControllerBiplane;
+    [SerializeField] private EnemyController enemyControllerBoeing;
 
     private float _cameraWidth;
     private float _cameraHeight;
@@ -26,14 +27,15 @@ public class EnemySpawnManager : MonoBehaviour
     [SerializeField] private float columnGap;
 
     private List<GameObject> _enemies;
+
     // Start is called before the first frame update
     void Start()
     {
         _enemies = new List<GameObject>();
-        
+
         _spawnVector = new Vector2(0, 0);
         _destroyVector = new Vector2(0, 0);
-        
+
         _cameraHeight = 2f * cam.orthographicSize;
         _cameraWidth = _cameraHeight * cam.aspect;
 
@@ -46,14 +48,28 @@ public class EnemySpawnManager : MonoBehaviour
             {
                 _spawnVector.y = Random.Range(cam.transform.position.y - _cameraHeight / 2,
                     cam.transform.position.y + _cameraHeight / 2);
-                
-                var enemy = Instantiate(enemyController, _spawnVector, Quaternion.identity, gameObject.transform);
 
-                enemy.maxY = cam.transform.position.y + _cameraHeight / 2;
-                enemy.minY = cam.transform.position.y - _cameraHeight / 2;
+                var pick = Random.Range(0, 2);
                 
-                _enemies.Add(enemy.gameObject);
+                if (pick == 1)
+                {
+                    var enemy = Instantiate(enemyControllerBiplane, _spawnVector, Quaternion.identity,
+                        gameObject.transform);
+                    enemy.maxY = cam.transform.position.y + _cameraHeight / 2;
+                    enemy.minY = cam.transform.position.y - _cameraHeight / 2;
+                    _enemies.Add(enemy.gameObject);
+                }
+                else if (pick == 0)
+                {
+                    var enemy = Instantiate(enemyControllerBoeing, _spawnVector, Quaternion.identity, gameObject.transform);
+                    enemy.maxY = cam.transform.position.y + _cameraHeight / 2;
+                    enemy.minY = cam.transform.position.y - _cameraHeight / 2;
+                    _enemies.Add(enemy.gameObject);
+                }
+
+
             }
+
             _enemyPerColumn = Random.Range(0, 3);
             _spawnVector.x += columnGap;
         }
@@ -63,7 +79,7 @@ public class EnemySpawnManager : MonoBehaviour
     void Update()
     {
         _destroyVector.x = cam.transform.position.x - _cameraWidth / 2 - spawnOffsetX;
-        
+
         for (var i = 0; i < _enemies.Count; i++)
         {
             var enemy = _enemies[i];
