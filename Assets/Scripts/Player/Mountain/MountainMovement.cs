@@ -5,9 +5,10 @@ namespace Player.Mountain
 {
     public class MountainMovement : MonoBehaviour
     {
-        [SerializeField] private int movementAmount;
-        [SerializeField] private int minPosY;
-        [SerializeField] private int maxPosY;
+        [SerializeField] private float movementAmount;
+        [SerializeField] private float minPosY;
+        [SerializeField] private float maxPosY;
+        [SerializeField] private Transform target;
         
         private void OnEnable()
         {
@@ -30,27 +31,29 @@ namespace Player.Mountain
         private void MoveUp()
         {
             Debug.Log("Up!");
-            if (transform.position.y>=maxPosY)
+            if (target.position.y>=maxPosY)
             {
-                LevelLoader.intance.LoadNextLevel();
+                //LevelLoader.intance.LoadNextLevel();
                 //Mountain End!
                 Debug.Log("Mountain End!");
                 return;
             }
-            var pos = transform.position;
+
+            var pos = target.position;
             pos.y += movementAmount;
-            transform.position = pos;
+            target.position = pos;
         }
 
         private void MoveDown()
         {
             Debug.Log("Down");
-            if (transform.position.y<=minPosY)
+            if (target.position.y<=minPosY)
                 return;
-
-            var pos = transform.position;
+            
+            
+            var pos = target.position;
             pos.y -= movementAmount;
-            transform.position = pos;
+            target.position = pos;
         }
     }
 }
