@@ -121,13 +121,85 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
+--- !u!1001 &390907957
+=======
 --- !u!1001 &854806944
+>>>>>>> 94c5e623fdc14da6bb6a6adef13783c0b6813fe7
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
+    - target: {fileID: 4470425051724895283, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+=======
     - target: {fileID: 1369751554473122477, guid: 8e3304f1f0013eb45a82809b94f47e9f,
         type: 3}
       propertyPath: m_Name
@@ -169,41 +241,222 @@ PrefabInstance:
       value: -8.22
       objectReference: {fileID: 0}
     - target: {fileID: 1369751554473122480, guid: 8e3304f1f0013eb45a82809b94f47e9f,
+>>>>>>> 94c5e623fdc14da6bb6a6adef13783c0b6813fe7
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+=======
     - target: {fileID: 1369751554473122480, guid: 8e3304f1f0013eb45a82809b94f47e9f,
+>>>>>>> 94c5e623fdc14da6bb6a6adef13783c0b6813fe7
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+=======
     - target: {fileID: 1369751554473122480, guid: 8e3304f1f0013eb45a82809b94f47e9f,
+>>>>>>> 94c5e623fdc14da6bb6a6adef13783c0b6813fe7
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+=======
     - target: {fileID: 1369751554473122480, guid: 8e3304f1f0013eb45a82809b94f47e9f,
+>>>>>>> 94c5e623fdc14da6bb6a6adef13783c0b6813fe7
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+=======
     - target: {fileID: 1369751554473122480, guid: 8e3304f1f0013eb45a82809b94f47e9f,
+>>>>>>> 94c5e623fdc14da6bb6a6adef13783c0b6813fe7
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+=======
     - target: {fileID: 1369751554473122480, guid: 8e3304f1f0013eb45a82809b94f47e9f,
+>>>>>>> 94c5e623fdc14da6bb6a6adef13783c0b6813fe7
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 4470425051724895295, guid: b6d2bcb633dd277499cc9b050178cbd3,
+=======
     - target: {fileID: 1369751554473122480, guid: 8e3304f1f0013eb45a82809b94f47e9f,
+>>>>>>> 94c5e623fdc14da6bb6a6adef13783c0b6813fe7
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+  m_SourcePrefab: {fileID: 100100000, guid: b6d2bcb633dd277499cc9b050178cbd3, type: 3}
+--- !u!1 &390907958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4470425051160284876, guid: b6d2bcb633dd277499cc9b050178cbd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 390907957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1149553136
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979617, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 390907958}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 2144349549}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[1]
+      value: Hello doc
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[2]
+      value: 'Doctor: I hope you are doing well. How is it going? You still have
+        the pain in your head?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[3]
+      value: "I don\u2019t know doc. You tell me! Am I doing well? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[4]
+      value: "Doctor: I\u2019m afraid not. I\u2019m sorry. Your test results.. You
+        have one more week to live. You don\u2019t have to use your medicine anymore."
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[5]
+      value: "Doctor: You don\u2019t have to visit here anymore again. I\u2019ll
+        prescribe you something to help you go through this week in comfort. I\u2019m
+        sorry."
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[6]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[7]
+      value: 'This is it. This is the miserable end of my pitiful existence. What
+        to do? What to think? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[8]
+      value: "I know what to do. I\u2019ve been planning for this. I knew that this
+        day would come. Doesn\u2019t matter if a doctor or ... or someone else said."
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[9]
+      value: "I didn't stand a chance. It was obvious from the beginning. Dreams,
+        desires, wishes. I even \u2026 even had a bucket list like everyone else.
+        Maybe my last week is not the best occasion but the Last Dance."
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979619, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 45410f6a013780b478f27273f87b536d, type: 3}
+=======
   m_SourcePrefab: {fileID: 100100000, guid: 8e3304f1f0013eb45a82809b94f47e9f, type: 3}
 --- !u!1 &1072338429
 GameObject:
@@ -286,6 +539,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> 94c5e623fdc14da6bb6a6adef13783c0b6813fe7
 --- !u!1 &1564182013
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +689,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2144349549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4470425052471736257, guid: b6d2bcb633dd277499cc9b050178cbd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 390907957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2564018384843807167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -442,10 +708,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2564018383936926209, guid: c7c209db92750624982577c5a9db398f,
+        type: 3}
+      propertyPath: m_text
+      value: "What is it like to know when you are going to die? Is that luck or
+        a curse? Well, in my case it\u2019s worse than a curse. I don\u2019t know
+        when. But soon enough to know that I am dying. I\u2019m sick. Terribly. Today
+        I\u2019ll take another trip to the hospital. I hope this is the last\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564018383936926209, guid: c7c209db92750624982577c5a9db398f,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564018383936926210, guid: c7c209db92750624982577c5a9db398f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 2564018383936926210, guid: c7c209db92750624982577c5a9db398f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 2564018384288810105, guid: c7c209db92750624982577c5a9db398f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2564018384288810105, guid: c7c209db92750624982577c5a9db398f,
         type: 3}
