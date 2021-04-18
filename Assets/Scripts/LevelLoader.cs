@@ -10,11 +10,9 @@ public class LevelLoader : MonoBehaviour
     
     public Animator transition;
     [SerializeField] private int transitionTime;
-    public Button PlayButton;
+
     private void Awake()
     {
-        Button playButton = PlayButton.GetComponent<Button>();
-        playButton.onClick.AddListener(LoadNextLevel);
         if (intance==null)
         {
             intance = this;
