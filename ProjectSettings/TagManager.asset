@@ -49,11 +49,11 @@ TagManager:
   - name: Base
     uniqueID: 2434933243
     locked: 0
-  - name: Object
-    uniqueID: 3339873045
-    locked: 0
   - name: Sky
     uniqueID: 2731193583
+    locked: 0
+  - name: Object
+    uniqueID: 3339873045
     locked: 0
   - name: Montain
     uniqueID: 768958847
