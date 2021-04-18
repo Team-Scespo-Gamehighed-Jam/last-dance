@@ -85,11 +85,6 @@ public class GliderContoller : MonoBehaviour
             //TODO: Gameover Glider!
         }
 
-        else if (other.tag.Equals("Glider End Level Trigger"))
-        {
-            EndGame(false, 5);
-        }
-
         else if (other.tag.Equals("Ceiling Collider") && !gameFinished)
         {
             controllable = true;
@@ -113,5 +108,12 @@ public class GliderContoller : MonoBehaviour
         _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost * velocityBoost);
         gameFinished = true;
         //TODO: implement game over!
+    }
+    
+    public void Transition(bool controllable, float velocityBoost)
+    {
+        this.controllable = controllable;
+        _rb.velocity = Vector2.right * (Time.deltaTime * speed * horizontalVelocityBoost * velocityBoost);
+        gameFinished = true;
     }
 }
