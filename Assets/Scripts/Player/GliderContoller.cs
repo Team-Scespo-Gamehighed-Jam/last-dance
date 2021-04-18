@@ -119,7 +119,6 @@ public class GliderContoller : MonoBehaviour
         gameFinished = true;
         
         //TODO: implement game over!
-        GameOver();
     }
     
     public void Transition(bool controllable, float velocityBoost)
