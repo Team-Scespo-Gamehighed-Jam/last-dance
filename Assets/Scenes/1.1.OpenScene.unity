@@ -902,6 +902,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nurse
       objectReference: {fileID: 0}
+    - target: {fileID: 1491421627976536831, guid: 5dc6c49705407f6498518fa0a6b985b2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4250158258638182501, guid: 5dc6c49705407f6498518fa0a6b985b2,
         type: 3}
       propertyPath: m_RootOrder
