@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Glider
+  - Glider End Level Trigger
+  - Ground Collider
+  - Ceiling Collider
   layers:
   - Default
   - TransparentFX
