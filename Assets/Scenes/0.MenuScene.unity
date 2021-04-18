@@ -566,6 +566,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &642370464 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2564018384288810104, guid: c7c209db92750624982577c5a9db398f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1531813837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc3414bcf1a4b99976bebc148543e07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &862784357
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +994,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 964319716}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642370464}
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &964319716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1706,6 +1729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1256191342452281054, guid: 0b6e6ad2d36e532469736940ca06c8a4,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c681f98579343334c8d3eb3a8ac0d8a9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b6e6ad2d36e532469736940ca06c8a4, type: 3}
 --- !u!1 &1923149560
