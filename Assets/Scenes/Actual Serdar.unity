@@ -962,7 +962,7 @@ PrefabInstance:
     - target: {fileID: 2395237879180476507, guid: d007c1d9fe6a7bf41be152f32d003742,
         type: 3}
       propertyPath: columnGap
-      value: 17
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 2395237879180476507, guid: d007c1d9fe6a7bf41be152f32d003742,
         type: 3}
