@@ -17,7 +17,7 @@ namespace Enemy
         // Update is called once per frame
         void Update()
         {
-            transform.position += Vector3.left * Time.deltaTime;
+            transform.position += Vector3.left * Time.deltaTime * 2;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

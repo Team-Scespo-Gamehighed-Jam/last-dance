@@ -959,23 +959,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 862784359}
-    - target: {fileID: 2395237879180476507, guid: d007c1d9fe6a7bf41be152f32d003742,
-        type: 3}
-      propertyPath: columnGap
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2395237879180476507, guid: d007c1d9fe6a7bf41be152f32d003742,
-        type: 3}
-      propertyPath: enemyControllerBoeing
-      value: 
-      objectReference: {fileID: 2027530997185742103, guid: b7a528c76ab19bb41976ae76bf272329,
-        type: 3}
-    - target: {fileID: 2395237879180476507, guid: d007c1d9fe6a7bf41be152f32d003742,
-        type: 3}
-      propertyPath: enemyControllerBiplane
-      value: 
-      objectReference: {fileID: 7187268043272043619, guid: 8ffa661af03f9da45ba281f2bbacb873,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d007c1d9fe6a7bf41be152f32d003742, type: 3}
 --- !u!1001 &5756464725748724114
