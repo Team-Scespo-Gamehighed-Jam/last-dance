@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -28,11 +29,12 @@ namespace Player.Mountain
             _keys.Add("f");
             _keys.Add("g");
             _keys.Add("h");
-            
-            SpawnKey();
+
+            StartCoroutine(CheckKey());
+
         }
 
-        private void Update()
+        /*private void Update()
         {
             if (!Input.anyKeyDown || Input.GetMouseButtonDown(0)) return;
             
@@ -50,6 +52,38 @@ namespace Player.Mountain
                 CharacterMove(false);
             }
 
+        }*/
+
+        private IEnumerator CheckKey()
+        {
+            yield return new WaitForSeconds(11);
+            //Animator go 
+            SpawnKey();
+
+            do
+            {
+                if (Input.anyKeyDown && !Input.GetMouseButtonDown(0))
+                {
+                    if (_currentKey.text.ToLower()==Input.inputString)
+                    {
+                        //Character Up from mountain
+                        CharacterMove(true);
+
+                        Destroy(_currentKey.transform.parent.gameObject);
+                        SpawnKey();
+                    }
+                    else
+                    {
+                        //Character Down from mountain
+                        CharacterMove(false);
+                    }
+                }
+
+
+                yield return null;
+            } while (true);
+
+            yield return null;
         }
 
         public void SpawnKey()
