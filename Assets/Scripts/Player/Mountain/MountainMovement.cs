@@ -9,6 +9,10 @@ namespace Player.Mountain
         [SerializeField] private float minPosY;
         [SerializeField] private float maxPosY;
         [SerializeField] private Transform target;
+
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Sprite left;
+        [SerializeField] private Sprite right;
         
         private void OnEnable()
         {
@@ -30,15 +34,18 @@ namespace Player.Mountain
 
         private void MoveUp()
         {
-            Debug.Log("Up!");
+            //Debug.Log("Up!");
             if (target.position.y>=maxPosY)
             {
                 //LevelLoader.intance.LoadNextLevel();
-                //Mountain End!
                 Debug.Log("Mountain End!");
                 return;
             }
 
+            _spriteRenderer.sprite = (int)target.position.y%2==1 ? left : right;
+
+           
+            
             var pos = target.position;
             pos.y += movementAmount;
             target.position = pos;
@@ -46,10 +53,11 @@ namespace Player.Mountain
 
         private void MoveDown()
         {
-            Debug.Log("Down");
+            //Debug.Log("Down");
             if (target.position.y<=minPosY)
                 return;
             
+            _spriteRenderer.sprite = (int)target.position.y%2==1 ? left : right;
             
             var pos = target.position;
             pos.y -= movementAmount;
