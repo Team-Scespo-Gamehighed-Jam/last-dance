@@ -865,7 +865,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320105813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 4, y: -3.336, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1810,6 +1810,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 336624269797387369, guid: 89b90b6d9ee0b4d4990014adfb01c551,
+        type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1369751555633587452}
     - target: {fileID: 336624269797387374, guid: 89b90b6d9ee0b4d4990014adfb01c551,
         type: 3}
       propertyPath: m_Pivot.x
@@ -37641,7 +37646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495638225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 4, y: -3.336, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454612254}
@@ -38012,3 +38017,6 @@ MonoBehaviour:
   minPosY: 0
   maxPosY: 30.1
   target: {fileID: 148894190}
+  _spriteRenderer: {fileID: 1369751555633587453}
+  left: {fileID: 6704492823694672418, guid: ba885afddf4fda44b93ee17fd4360532, type: 3}
+  right: {fileID: -8234642361538660868, guid: 39465bbc918401b45990f3cbe27cc5e2, type: 3}

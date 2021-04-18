@@ -14,6 +14,7 @@ namespace Player.Mountain
         [SerializeField] private MountainKey prefabText;
         [SerializeField] private List<Transform> placeList;
         private TMP_Text _currentKey;
+        [SerializeField] private Animator playerAnimator;
         
         public delegate void CharacterUpDown(bool isUp);
         public static event CharacterUpDown CharacterEventHandler;
@@ -56,8 +57,9 @@ namespace Player.Mountain
 
         private IEnumerator CheckKey()
         {
-            yield return new WaitForSeconds(11);
+            yield return new WaitForSeconds(12);
             //Animator go 
+            playerAnimator.enabled=false;
             SpawnKey();
 
             do

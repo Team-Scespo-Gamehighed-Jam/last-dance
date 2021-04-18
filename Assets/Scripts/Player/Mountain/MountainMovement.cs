@@ -9,6 +9,10 @@ namespace Player.Mountain
         [SerializeField] private float minPosY;
         [SerializeField] private float maxPosY;
         [SerializeField] private Transform target;
+
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Sprite left;
+        [SerializeField] private Sprite right;
         
         private void OnEnable()
         {
@@ -39,6 +43,17 @@ namespace Player.Mountain
                 return;
             }
 
+            if ((int)target.position.y%2==1)
+            {
+                _spriteRenderer.sprite = left;
+            }
+            else
+            {
+                _spriteRenderer.sprite = right;
+            }
+
+           
+            
             var pos = target.position;
             pos.y += movementAmount;
             target.position = pos;
