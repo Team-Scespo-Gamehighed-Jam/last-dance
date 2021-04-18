@@ -13,6 +13,8 @@ namespace Player.Mountain
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private Sprite left;
         [SerializeField] private Sprite right;
+
+        [SerializeField] private Animator playerAnimator;
         
         private void OnEnable()
         {
@@ -37,8 +39,10 @@ namespace Player.Mountain
             //Debug.Log("Up!");
             if (target.position.y>=maxPosY)
             {
-                //LevelLoader.intance.LoadNextLevel();
-                Debug.Log("Mountain End!");
+                LevelLoader.intance.LoadNextLevel();
+                //Debug.Log("Mountain End!");
+                //playerAnimator.enabled = true;
+                //playerAnimator.SetTrigger("StartAfterClimb");
                 return;
             }
 
