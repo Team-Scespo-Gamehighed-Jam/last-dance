@@ -321,7 +321,7 @@ PrefabInstance:
     - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
         type: 3}
       propertyPath: _dialog.lines.Array.size
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
         type: 3}
@@ -342,7 +342,7 @@ PrefabInstance:
     - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
         type: 3}
       propertyPath: _dialog.lines.Array.data[4]
-      value: "Doctor: I\u2019m afraid not. I\u2019m sorry. Your test results.. You
+      value: "Doctor: I\u2019m afraid not. I\u2019m sorry. Your test results... You
         have one more week to live. You don\u2019t have to use your medicine anymore."
       objectReference: {fileID: 0}
     - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
@@ -373,8 +373,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _dialog.lines.Array.data[9]
       value: "I didn't stand a chance. It was obvious from the beginning. Dreams,
-        desires, wishes. I even \u2026 even had a bucket list like everyone else.
-        Maybe my last week is not the best occasion but the Last Dance."
+        desires, wishes. I even \u2026 even had a bucket list like everyone else."
+      objectReference: {fileID: 0}
+    - target: {fileID: 415177877728979618, guid: 45410f6a013780b478f27273f87b536d,
+        type: 3}
+      propertyPath: _dialog.lines.Array.data[10]
+      value: Maybe my last week is not the best occasion but the Last Dance.
       objectReference: {fileID: 0}
     - target: {fileID: 415177877728979619, guid: 45410f6a013780b478f27273f87b536d,
         type: 3}
