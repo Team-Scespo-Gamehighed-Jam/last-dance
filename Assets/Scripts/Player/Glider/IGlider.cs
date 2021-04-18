@@ -21,5 +21,7 @@ namespace Player.Glider
     public interface IGlider
     {
         int InstanceID { get; }
+        
+        GliderContoller Controller { get; }
     }
 }
