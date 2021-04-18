@@ -12,6 +12,7 @@ namespace Triggers
                 return;
             
             //Debug.Log("Use Rocket Animation");
+            GliderHelper.GliderList[instanceID].Controller.Transition(false, 5);
             LevelLoader.intance.LoadNextLevel();
             //Glider End Animation!
         }
