@@ -25,8 +25,6 @@ namespace Triggers
             _keys.Add("f");
             _keys.Add("g");
             _keys.Add("h");
-            
-            
         }
         
         
