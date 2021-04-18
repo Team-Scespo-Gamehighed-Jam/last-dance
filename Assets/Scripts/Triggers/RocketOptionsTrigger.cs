@@ -75,7 +75,7 @@ namespace Triggers
                     {
                         Debug.Log("Space");
                         //Parachute animation End!
-                        //LevelLoader.intance.LoadNextLevel();
+                        LevelLoader.intance.LoadNextLevel();
                         isEnd = false;
                         //Space
                     }
