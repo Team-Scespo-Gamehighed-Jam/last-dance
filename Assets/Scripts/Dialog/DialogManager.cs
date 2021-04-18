@@ -2,6 +2,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Dialog
 {
@@ -38,6 +39,8 @@ namespace Dialog
         private void Update()
         {
             if (!Input.GetKeyDown(KeyCode.Space)) return;
+
+            if (SceneManager.GetActiveScene().buildIndex==4) return;
             
             if (counter>=_dialog.Lines.Count-1)
             {
