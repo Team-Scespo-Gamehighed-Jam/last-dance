@@ -404,7 +404,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Artist - Fatih Ko\xE7\n\nGame Developer - Yunus Emre G\xFCne\u015F \n\nGame
-    Developer - Muhammed Serdar Oygen\n\nGame Designer - Uzay Ad\u0131g\xFCzel"
+    Developer & Narrative - Muhammed Serdar Oygen\n\nGame Designer & Music - Uzay
+    Ad\u0131g\xFCzel"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
