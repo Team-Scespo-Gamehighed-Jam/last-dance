@@ -34,23 +34,15 @@ namespace Player.Mountain
 
         private void MoveUp()
         {
-            Debug.Log("Up!");
+            //Debug.Log("Up!");
             if (target.position.y>=maxPosY)
             {
                 //LevelLoader.intance.LoadNextLevel();
-                //Mountain End!
                 Debug.Log("Mountain End!");
                 return;
             }
 
-            if ((int)target.position.y%2==1)
-            {
-                _spriteRenderer.sprite = left;
-            }
-            else
-            {
-                _spriteRenderer.sprite = right;
-            }
+            _spriteRenderer.sprite = (int)target.position.y%2==1 ? left : right;
 
            
             
@@ -61,10 +53,11 @@ namespace Player.Mountain
 
         private void MoveDown()
         {
-            Debug.Log("Down");
+            //Debug.Log("Down");
             if (target.position.y<=minPosY)
                 return;
             
+            _spriteRenderer.sprite = (int)target.position.y%2==1 ? left : right;
             
             var pos = target.position;
             pos.y -= movementAmount;

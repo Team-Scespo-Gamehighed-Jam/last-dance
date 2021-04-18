@@ -1928,7 +1928,7 @@ PrefabInstance:
     - target: {fileID: 336624269797387666, guid: 89b90b6d9ee0b4d4990014adfb01c551,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89b90b6d9ee0b4d4990014adfb01c551, type: 3}
@@ -2452,8 +2452,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232138829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.040771, y: -1.1458459, z: 107.90557}
-  m_LocalScale: {x: 6, y: 6.0423355, z: 6.0423355}
+  m_LocalPosition: {x: 17.168, y: -1.1458459, z: 107.90557}
+  m_LocalScale: {x: 6.360687, y: 6.0423355, z: 6.0423355}
   m_Children: []
   m_Father: {fileID: 264981518}
   m_RootOrder: 7
@@ -37816,8 +37816,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843413275}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.915, y: -1.1458459, z: 107.90557}
-  m_LocalScale: {x: -6.231629, y: 6.0423355, z: 6.0423355}
+  m_LocalPosition: {x: 11.939, y: -1.1458459, z: 107.90557}
+  m_LocalScale: {x: -6.1741247, y: 6.0423355, z: 6.0423355}
   m_Children: []
   m_Father: {fileID: 264981518}
   m_RootOrder: 0
@@ -38020,7 +38020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementAmount: 1
   minPosY: 0
-  maxPosY: 30.1
+  maxPosY: 31
   target: {fileID: 148894190}
   _spriteRenderer: {fileID: 1369751555633587453}
   left: {fileID: 6704492823694672418, guid: ba885afddf4fda44b93ee17fd4360532, type: 3}
