@@ -8,6 +8,11 @@ namespace Dialog
     {
         [SerializeField] private List<string> lines;
 
-        public List<string> Lines => lines;
+
+        public List<string> Lines
+        {
+            get => lines;
+            set => lines = value;
+        }
     }
 }
