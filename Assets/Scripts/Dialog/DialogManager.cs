@@ -40,11 +40,14 @@ namespace Dialog
         {
             if (!Input.GetKeyDown(KeyCode.Space)) return;
 
-            if (SceneManager.GetActiveScene().buildIndex==4) return;
+            //if (SceneManager.GetActiveScene().buildIndex==4) return;
             
             if (counter>=_dialog.Lines.Count-1)
             {
                 dialogBox.SetActive(false);
+                
+                if (SceneManager.GetActiveScene().buildIndex==4) return;
+                
                 LevelLoader.intance.LoadNextLevel();
                 return;
             }
