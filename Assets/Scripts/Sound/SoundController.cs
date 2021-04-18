@@ -8,6 +8,7 @@ namespace Sound
         public static SoundController SoundPlayer;
 
         public AudioSource MainAudioSource;
+        public AudioSource SFXAudioSource;
         
         private void Awake()
         {
